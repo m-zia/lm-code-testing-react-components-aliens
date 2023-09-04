@@ -13,6 +13,14 @@ const W12MForm = () => {
 	const [numberOfBeings, setNumberOfBeings] = useState('0');
 	const [twoPlusTwo, setTwoPlusTwo] = useState('');
 	const [reason, setReason] = useState('')
+	const [isSubmitting, setIsSubmitting] = useState(false);
+
+	const submitForm = () => {
+		setIsSubmitting(true);
+		console.log({
+			speciesName, planetName, numberOfBeings, twoPlusTwo, reason
+		});
+	};
 
 	return (
 		<section className='w12MForm'>
@@ -23,6 +31,10 @@ const W12MForm = () => {
 			<NumberOfBeings numberOfBeings={numberOfBeings} onChangeBeingsNumber={(value) => setNumberOfBeings(value)} />
 			<TwoPlusTwo twoPlusTwo={twoPlusTwo} onChangeTwoPlusTwo={(value) => setTwoPlusTwo(value)} />
 			<ReasonForSparing reason={reason} onChangeReason={(value) => setReason(value)} />
+
+			<button type="button" onClick={submitForm} disabled={isSubmitting}>
+				Submit
+			</button>
 
 		</section>
 	);
