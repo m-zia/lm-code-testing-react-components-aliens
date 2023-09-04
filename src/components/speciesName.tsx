@@ -7,11 +7,13 @@ export const SpeciesName: React.FC<SpeciesNameProps> = ({ speciesName, onChangeS
     <>
         <div>
             <label htmlFor='speciesName'>Species Name</label>
-            <input id='speciesName'
-                type='text'
-                value={speciesName}
-                onChange={(e) => onChangeSpeciesName(e.target.value)} />
 
+            <div>
+                <input id='speciesName'
+                    type='text'
+                    value={speciesName}
+                    onChange={(e) => onChangeSpeciesName(e.target.value)} />
+            </div>
         </div>
     </>
 );

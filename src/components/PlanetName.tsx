@@ -8,11 +8,14 @@ export const PlanetName: React.FC<PlanetNameProps> = ({ planetName, onChangePlan
 
         <div>
             <label htmlFor='planetName'>Planet Name</label>
-            <input id='planetName'
-                type='text'
-                value={planetName}
-                onChange={(e) => onChangePlanetName(e.target.value)} />
 
+            <div>
+                <input id='planetName'
+                    type='text'
+                    value={planetName}
+                    onChange={(e) => onChangePlanetName(e.target.value)} />
+            </div>
+            
         </div>
 
     </>
