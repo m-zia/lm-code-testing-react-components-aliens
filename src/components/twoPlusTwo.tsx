@@ -2,7 +2,7 @@ interface TwoPlusTwo {
     twoPlusTwo: string;
     onChangeTwoPlusTwo: (value: string) => void;
 }
-
+ 
 export const TwoPlusTwo: React.FC<TwoPlusTwo> = ({ twoPlusTwo, onChangeTwoPlusTwo }) => (
     <>
         <div>
