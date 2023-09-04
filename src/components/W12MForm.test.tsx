@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import W12MForm from './W12MForm';
 
 test('renders form element', () => {
@@ -9,4 +9,17 @@ test('renders form element', () => {
 	// the container is just a normal DOM element, so we can look at normal properties like '.firstChild'
 	// for example, the firstChild of our container should be our form element
 	expect(container.firstChild).toHaveClass('w12MForm');
+});
+
+
+test('submit button calls the handler function with correct parameters', () => {
+  // Render the W12MForm component
+  render(<W12MForm />);
+  
+  // Select the submit button
+  const submitButton = screen.getByText('Submit');
+
+  // Simulate a click event on the submit button
+  fireEvent.click(submitButton);
+
 });
