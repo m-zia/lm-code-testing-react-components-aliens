@@ -7,17 +7,16 @@ interface SparingProps {
 
 export const ReasonForSparing: React.FC<SparingProps> = ({ reason, onChangeReason }) => {
 
-
     const validate: (value: string) => string | undefined = (value) => {
         if (value.length < 17 || value.length > 153) {
-          return "Keep your reason between 17 and 153 characters...OR DIE!!!";
+            return "Keep your reason between 17 and 153 characters";
         }
         return undefined;
-      };
-    
-      const errorMessage = validate(reason);
+    };
 
-      
+    const errorMessage = validate(reason);
+
+
     return (
         <>
             <div>

@@ -9,8 +9,9 @@ export const TwoPlusTwo: React.FC<TwoPlusTwo> = ({ twoPlusTwo, onChangeTwoPlusTw
 
     const validate: (value: string) => string | undefined = (value) => {
         if (value !== "4") {
-            return "Please select the correct answer. (it's 4 🤫)";
+            return "Error. Please select the correct answer.";
         }
+
         return undefined;
     };
 
