@@ -24,6 +24,7 @@ export const TwoPlusTwo: React.FC<TwoPlusTwo> = ({ twoPlusTwo, onChangeTwoPlusTw
                 <select id='twoPlusTwo'
                     value={twoPlusTwo}
                     onChange={(e) => onChangeTwoPlusTwo(e.target.value)}>
+                    <option value="default">Please select an answer</option>
                     <option value="4">4</option>
                     <option value="Not 4">Not 4</option>
                 </select>

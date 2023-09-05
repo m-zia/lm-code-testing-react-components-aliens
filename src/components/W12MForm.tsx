@@ -8,9 +8,9 @@ import { ReasonForSparing } from './ReasonForSparing';
 
 const W12MForm = () => {
 
-	const [speciesName, setSpeciesName] = useState('humans');
-	const [planetName, setPlanetName] = useState('Earth');
-	const [numberOfBeings, setNumberOfBeings] = useState('0');
+	const [speciesName, setSpeciesName] = useState('');
+	const [planetName, setPlanetName] = useState('');
+	const [numberOfBeings, setNumberOfBeings] = useState('');
 	const [twoPlusTwo, setTwoPlusTwo] = useState('');
 	const [reason, setReason] = useState('')
 	const [isSubmitting, setIsSubmitting] = useState(false);
